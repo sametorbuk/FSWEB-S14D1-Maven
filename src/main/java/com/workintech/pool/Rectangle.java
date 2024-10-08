@@ -2,30 +2,23 @@ package com.workintech.pool;
 
 public class Rectangle {
 
-    private int length;
-    private int width;
+    private double length;
+    private double width;
 
-    public Rectangle(int length , int width) {
-
-        this.length = length < 0 ? 0 : length;
-        this.width = width < 0 ? 0 : width;
+    public Rectangle(double length, double width) {
+        this.length = Math.max(0, length);
+        this.width = Math.max(0, width);
     }
 
-
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-
-    public int getArea(){
-        return width*length;
+    public double getArea() {
+        return width * length;
     }
-
-
-
-
 }
